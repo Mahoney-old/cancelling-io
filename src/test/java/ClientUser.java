@@ -55,7 +55,7 @@ public class ClientUser {
 
         try {
             final StatusLine statusLine = new GetBlahCommand(httpClient).execute();
-            fail("Should have timed out!");
+            fail("Should have timed out !");
         } catch (HystrixRuntimeException hre) {
             Thread.sleep(100L);
             assertThat(httpClient.getStats().getLeased(), is(0));
